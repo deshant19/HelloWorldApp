@@ -6,13 +6,4 @@
         state: present
       
     - name: Start Docker Container
-      docker_container:
-        name: helloworldappimage
-        image: "helloworldapp:ext1"
-        pull: always
-        insecure_registry: true
-        state: started
-        ports:
-          - "8080:8080"
-        expose:
-          - 8080
+      command: sudo docker run -p 8080:8080 helloworldapp:ex1
