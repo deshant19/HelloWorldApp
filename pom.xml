@@ -52,8 +52,6 @@
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
 					<dockerDirectory>${basedir}</dockerDirectory>
-					<!-- <serverId>docker-hub</serverId>
-					<registryUrl>https://index.docker.io/v1/</registryUrl> -->
 					<image>${docker.image.prefix}/${project.artifactId}</image>
 					<newName>${docker.image.prefix}/${project.artifactId}:${project.version}</newName>
 					<forceTags>true</forceTags>
@@ -69,20 +67,6 @@
 			<plugin>
 			  <groupId>org.apache.maven.plugins</groupId>
 			  <artifactId>maven-dependency-plugin</artifactId> 
-			</plugin>
-			<plugin>
-				<groupId>co.escapeideas.maven</groupId>
-				<artifactId>ansible-maven-plugin</artifactId>
-				<version>1.2.0</version>
-				<configuration>
-					<inventory>${basedir}/ansible/hosts</inventory>
-					<playbook>${basedir}/ansible/playbook.yml</playbook>
-					<extraVars>
-						<docker.image.prefix>dockerImagePrefix=${docker.image.prefix}</docker.image.prefix>
-						<project.artifactId>projectArtifactId=${project.artifactId}</project.artifactId>
-						<project.version>projectVersion=${project.version}</project.version>
-					</extraVars>
-				</configuration>
 			</plugin>
 			
 		</plugins>
