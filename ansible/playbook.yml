@@ -5,11 +5,7 @@
         name: 'https://pypi.python.org/packages/source/d/docker-py/docker-py-1.1.0.tar.gz'
         state: present
     - name: build the image
-      docker_image: >
-        name=helloworldapp
-        tag=ex1
-        path=/home/deshant
-        state=present
+      command: docker build -t helloworldapp:ex1 /home/deshant
     - name: Start Docker Container
       docker:
         name: helloworldappimage
