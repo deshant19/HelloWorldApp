@@ -12,7 +12,6 @@ class HelloWorldAppController {
 	@RequestMapping("/helloworld")
 	  public String helloWorld() {
 	    String response = "Hello World";
-	    System.out.println(response);
 	    return response;
 	}
 	  
