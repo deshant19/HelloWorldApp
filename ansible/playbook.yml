@@ -9,5 +9,5 @@
       docker_container:
         name: helloworldappimage
         image: "helloworldapp:ext1"
-        state: reloaded
+        state: started
         publish_all_ports: yes
