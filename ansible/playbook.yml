@@ -10,7 +10,7 @@
       
     - name: start docker container
           docker:
-            name: helloworldappimage
-            image: "helloworldapp:ext1"
-            state: reloaded
-            publish_all_ports: yes
+              name: helloworldappimage
+              image: "helloworldapp:ext1"
+              state: reloaded
+              publish_all_ports: yes
