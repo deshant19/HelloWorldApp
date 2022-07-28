@@ -8,14 +8,9 @@
     - name: build the image
       command: sudo docker build -t helloworldapp:ex1
       
-    - name: Start Docker Container
-      docker:
-        name: helloworldappimage
-        image: "helloworldapp:ext1"
-        pull: always
-        insecure_registry: true
-        state: started
-        ports:
-          - "8080:8080"
-        expose:
-          - 8080
+    - name: start docker container
+          docker:
+            name: helloworldappimage
+            image: "helloworldapp:ext1"
+            state: reloaded
+            publish_all_ports: yes
