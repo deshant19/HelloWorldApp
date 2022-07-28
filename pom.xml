@@ -15,6 +15,7 @@
 	<description>Hello World App for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
+		<docker.image.prefix>helloworldapp</docker.image.prefix>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,7 +40,6 @@
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-resources-plugin</artifactId>
-			    <version>3.2.0</version>
 			</plugin>  
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
