@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class HelloWorldAppController {
 	
-  @RequestMapping("/helloworld")
-  public String helloDocker() {
-    String response = "Hello World";
-    System.out.println(response);
-    return response;
-  }
-  
-  @RequestMapping (value = "/**", method = {RequestMethod.GET, RequestMethod.POST})
-  public ResponseEntity<String> defaultPath() {
-      return new ResponseEntity<String>("Wrong request. Try URL /helloworld", HttpStatus.OK);
-  }
+	@RequestMapping("/helloworld")
+	  public String helloWorld() {
+	    String response = "Hello World";
+	    System.out.println(response);
+	    return response;
+	}
+	  
+	@RequestMapping (value = "/**", method = {RequestMethod.GET, RequestMethod.POST})
+	public ResponseEntity<String> wrongPathResponseHandler() {
+	    return new ResponseEntity<String>("Wrong request. Try URL /helloworld", HttpStatus.OK);
+	}
 }
