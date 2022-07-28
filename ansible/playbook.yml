@@ -5,9 +5,14 @@
         name: 'https://pypi.python.org/packages/source/d/docker-py/docker-py-1.1.0.tar.gz'
         state: present
       
-    - name: start docker container
+    - name: Start Docker Container
       docker_container:
         name: helloworldappimage
         image: "helloworldapp:ext1"
+        pull: always
+        insecure_registry: true
         state: started
-        publish_all_ports: yes
+        ports:
+          - "8080:8080"
+        expose:
+          - 8080
