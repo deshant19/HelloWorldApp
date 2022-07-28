@@ -6,7 +6,11 @@
         state: present
         
     - name: build the image
-      command: sudo docker build -t helloworldapp:ex1
+      docker_image: >
+        name=helloworldapp
+        tag=ex1
+        path=/home/deshant
+        state=present
       
     - name: start docker container
       docker_container:
