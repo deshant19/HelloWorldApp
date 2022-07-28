@@ -6,7 +6,7 @@
         state: present
         
     - name: build the image
-      command: sudo docker build -t helloworldapp:ex1 ./
+      command: sudo docker build -t helloworldapp:ex1 ../
       
     - name: Start Docker Container
       command: sudo docker run -p 8080:8080 helloworldapp:ex1
