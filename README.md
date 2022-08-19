@@ -9,4 +9,4 @@
 5. ansible-playbook -i hosts playbook.yml
 
 ### Access the app using
-curl 20.25.159.254:8080/helloworld (App hosted on Azure VM having public IP)
+curl 20.25.159.254:8080/helloworld (App hosted on Azure VM having public IP) - App no longer hosted on Azure
